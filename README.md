@@ -1,4 +1,4 @@
-# AI Agents Collaboration Network
+# ConcordIA - AI Agents Collaboration Network
 
 Una librería TypeScript para crear y conectar agentes de inteligencia artificial en una red colaborativa, permitiendo la comunicación y colaboración entre múltiples agentes especializados.
 
@@ -16,7 +16,7 @@ Una librería TypeScript para crear y conectar agentes de inteligencia artificia
 ## 📦 Instalación
 
 ```bash
-npm install ai-agents-collaboration
+npm install @aurik3/concord-ia
 ```
 
 ## 🔧 Requisitos
@@ -35,10 +35,10 @@ npm install ai-agents-collaboration
 ### 1. Configuración Inicial
 
 ```typescript
-import { WebSocketTransport } from 'ai-agents-collaboration/transport';
-import { Encryption } from 'ai-agents-collaboration/utils/encryption';
-import { Authentication } from 'ai-agents-collaboration/utils/auth';
-import { Agent, AgentStatus, AgentCapability } from 'ai-agents-collaboration/types';
+import { WebSocketTransport } from '@aurik3/concord-ia/transport';
+import { Encryption } from '@aurik3/concord-ia/utils/encryption';
+import { Authentication } from '@aurik3/concord-ia/utils/auth';
+import { Agent, AgentStatus, AgentCapability } from '@aurik3/concord-ia/types';
 
 // Configuración de seguridad
 const encryption = new Encryption('tu-clave-encryption');
@@ -180,9 +180,9 @@ El servidor central actúa como punto de conexión para todos los agentes. Debe 
 
 ```typescript
 // server.ts
-import { WebSocketTransport } from 'ai-agents-collaboration/transport';
-import { Encryption } from 'ai-agents-collaboration/utils/encryption';
-import { Authentication } from 'ai-agents-collaboration/utils/auth';
+import { WebSocketTransport } from '@aurik3/concord-ia/transport';
+import { Encryption } from '@aurik3/concord-ia/utils/encryption';
+import { Authentication } from '@aurik3/concord-ia/utils/auth';
 import { config } from 'dotenv';
 
 config();
@@ -234,10 +234,10 @@ Los agentes remotos se conectan al servidor central desde cualquier ubicación e
 
 ```typescript
 // remote-agent.ts
-import { WebSocketTransport } from 'ai-agents-collaboration/transport';
-import { Encryption } from 'ai-agents-collaboration/utils/encryption';
-import { Authentication } from 'ai-agents-collaboration/utils/auth';
-import { Agent, AgentStatus, AgentCapability, MessageType, MessagePriority, Message } from 'ai-agents-collaboration/types';
+import { WebSocketTransport } from '@aurik3/concord-ia/transport';
+import { Encryption } from '@aurik3/concord-ia/utils/encryption';
+import { Authentication } from '@aurik3/concord-ia/utils/auth';
+import { Agent, AgentStatus, AgentCapability, MessageType, MessagePriority, Message } from '@aurik3/concord-ia/types';
 import { config } from 'dotenv';
 
 config();
